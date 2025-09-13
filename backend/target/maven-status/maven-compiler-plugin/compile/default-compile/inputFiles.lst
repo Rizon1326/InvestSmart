@@ -1,0 +1,10 @@
+/Users/rizon/Desktop/Therap-Java/backend/src/main/java/com/businessanalysis/marketanalysis/controller/MarketAnalysisController.java
+/Users/rizon/Desktop/Therap-Java/backend/src/main/java/com/businessanalysis/marketanalysis/service/BusinessAnalysisService.java
+/Users/rizon/Desktop/Therap-Java/backend/src/main/java/com/businessanalysis/marketanalysis/model/AnalysisResult.java
+/Users/rizon/Desktop/Therap-Java/backend/src/main/java/com/businessanalysis/marketanalysis/MarketAnalysisApplication.java
+/Users/rizon/Desktop/Therap-Java/backend/src/main/java/com/businessanalysis/marketanalysis/service/ScrapingService.java
+/Users/rizon/Desktop/Therap-Java/backend/src/main/java/com/businessanalysis/marketanalysis/service/GroqApiService.java
+/Users/rizon/Desktop/Therap-Java/backend/src/main/java/com/businessanalysis/marketanalysis/model/UserInput.java
+/Users/rizon/Desktop/Therap-Java/backend/src/main/java/com/businessanalysis/marketanalysis/service/MarketAnalysisService.java
+/Users/rizon/Desktop/Therap-Java/backend/src/main/java/com/businessanalysis/marketanalysis/repository/UserInputRepository.java
+/Users/rizon/Desktop/Therap-Java/backend/src/main/java/com/businessanalysis/marketanalysis/repository/AnalysisResultRepository.java
