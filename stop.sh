@@ -15,7 +15,8 @@ YELLOW='\033[1;33m'
 RED='\033[0;31m'
 NC='\033[0m' # No Color
 
-PROJECT_ROOT="/Users/rizon/Desktop/Therap-Java"
+# Project root directory (automatically detect from script location)
+PROJECT_ROOT="$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)"
 
 # Function to stop service by PID file
 stop_service_by_pid() {

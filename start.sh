@@ -15,8 +15,8 @@ YELLOW='\033[1;33m'
 RED='\033[0;31m'
 NC='\033[0m' # No Color
 
-# Project root directory
-PROJECT_ROOT="/Users/rizon/Desktop/Therap-Java"
+# Project root directory (automatically detect from script location)
+PROJECT_ROOT="$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)"
 
 # Function to check if service is running
 check_service() {
@@ -96,10 +96,17 @@ else
 fi
 
 # Check Python virtual environment
-if [ -f "$PROJECT_ROOT/.venv/bin/python" ]; then
+if [ -f "$PROJECT_ROOT/venv/bin/python" ]; then
     echo -e "${GREEN}✅ Python virtual environment found${NC}"
+    PYTHON_CMD="$PROJECT_ROOT/venv/bin/python"
+elif [ -f "$PROJECT_ROOT/.venv/bin/python" ]; then
+    echo -e "${GREEN}✅ Python virtual environment found${NC}"
+    PYTHON_CMD="$PROJECT_ROOT/.venv/bin/python"
+elif command -v python3 &> /dev/null; then
+    echo -e "${YELLOW}⚠️ Using system Python3${NC}"
+    PYTHON_CMD="python3"
 else
-    echo -e "${RED}❌ Python virtual environment not found${NC}"
+    echo -e "${RED}❌ Python not found${NC}"
     exit 1
 fi
 
@@ -164,7 +171,7 @@ else
     echo -e "${YELLOW}🔧 Starting Python services...${NC}"
     
     # Start Python services in background
-    nohup "$PROJECT_ROOT/.venv/bin/python" scraping_service.py > "$PROJECT_ROOT/python.log" 2>&1 &
+    nohup "$PYTHON_CMD" scraping_service.py > "$PROJECT_ROOT/python.log" 2>&1 &
     python_pid=$!
     echo $python_pid > "$PROJECT_ROOT/python.pid"
     

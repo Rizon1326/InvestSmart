@@ -2,20 +2,23 @@
 > market-analysis-frontend@1.0.0 start
 > react-scripts start
 
-(node:5379) [DEP_WEBPACK_DEV_SERVER_ON_AFTER_SETUP_MIDDLEWARE] DeprecationWarning: 'onAfterSetupMiddleware' option is deprecated. Please use the 'setupMiddlewares' option.
+(node:11340) [DEP_WEBPACK_DEV_SERVER_ON_AFTER_SETUP_MIDDLEWARE] DeprecationWarning: 'onAfterSetupMiddleware' option is deprecated. Please use the 'setupMiddlewares' option.
 (Use `node --trace-deprecation ...` to show where the warning was created)
-(node:5379) [DEP_WEBPACK_DEV_SERVER_ON_BEFORE_SETUP_MIDDLEWARE] DeprecationWarning: 'onBeforeSetupMiddleware' option is deprecated. Please use the 'setupMiddlewares' option.
+(node:11340) [DEP_WEBPACK_DEV_SERVER_ON_BEFORE_SETUP_MIDDLEWARE] DeprecationWarning: 'onBeforeSetupMiddleware' option is deprecated. Please use the 'setupMiddlewares' option.
 Starting the development server...
 
-Compiled successfully!
+Compiled with warnings.
 
-You can now view market-analysis-frontend in the browser.
+[eslint] 
+src/components/charts/DemandForecastChart.tsx
+  Line 3:3:  'LineChart' is defined but never used  @typescript-eslint/no-unused-vars
 
-  Local:            http://localhost:3000
-  On Your Network:  http://192.168.0.105:3000
+Search for the keywords to learn more about each warning.
+To ignore, add // eslint-disable-next-line to the line before.
 
-Note that the development build is not optimized.
-To create a production build, use npm run build.
+WARNING in [eslint] 
+src/components/charts/DemandForecastChart.tsx
+  Line 3:3:  'LineChart' is defined but never used  @typescript-eslint/no-unused-vars
 
-webpack compiled successfully
+webpack compiled with 1 warning
 No issues found.
